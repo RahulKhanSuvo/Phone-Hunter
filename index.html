@@ -42,7 +42,25 @@
         </section>
     </header>
     <main class="container mx-auto">
+        <!-- search section -->
+        <section class="mb-14">
+            <h1 class="text-center font-semibold text-3xl mb-8">Search your phone</h1>
+            <div class="flex items-center w-full max-w-lg mx-auto bg-gray-100 p-2 rounded-lg">
+                <!-- Search Icon and Input Field -->
+                <div class="flex items-center w-full">
+                    <i class="fas fa-search text-gray-400 mr-2"></i>
+                    <input type="text" placeholder="Search your phone"
+                        class="w-full bg-transparent focus:outline-none text-gray-600">
+                </div>
 
+                <!-- Search Button -->
+                <button
+                    class="ml-3 px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition duration-300">
+                    Search
+                </button>
+            </div>
+        </section>
+        <section id="phone-container"></section>
     </main>
     <script src="./script.js"></script>
 </body>
