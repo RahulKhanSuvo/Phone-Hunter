@@ -51,7 +51,7 @@
                 <!-- Search Icon and Input Field -->
                 <div class="flex items-center w-full">
                     <i class="fas fa-search text-gray-400 mr-2"></i>
-                    <input type="text" placeholder="Search your phone"
+                    <input id="search-box" type="text" placeholder="Search your phone"
                         class="w-full bg-transparent focus:outline-none text-gray-600">
                 </div>
 
@@ -71,7 +71,13 @@
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4"></div>
 
             <!-- dynamic card  -->
+            <div class="flex justify-center"><button onclick="handelShowAll()"
+                    class=" px-10 py-4 bg-[#0D6EFD] rounded-md text-white font-bold">Show
+                    All</button></div>
         </section>
+        <div id="modal-container">
+
+        </div>
     </main>
     <footer class="bg-gray-50 py-10">
         <div class="container mx-auto px-4">
