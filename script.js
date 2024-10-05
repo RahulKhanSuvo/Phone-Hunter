@@ -7,7 +7,11 @@ const loadAllPhones = async (brandName = "iphone") => {
   const data = await response.json();
 
   displayAllPhones(data.data);
-
+  if (data.data.length > 6) {
+    document.getElementById("show-all-btn").classList.remove("hidden");
+  } else {
+    document.getElementById("show-all-btn").classList.add("hidden");
+  }
   document.getElementById("spinner").classList.add("hidden");
 };
 const displayAllPhones = (phones, status) => {
@@ -19,8 +23,15 @@ const displayAllPhones = (phones, status) => {
   } else {
     newPhones = phones;
   }
+
   const phonesContainer = document.getElementById("phone-container");
   phonesContainer.innerHTML = "";
+  if (phones.length === 0) {
+    phonesContainer.innerHTML = `
+    <h2>No data found</h2>
+    `;
+    return;
+  }
   newPhones.forEach((phone) => {
     const div = document.createElement("div");
     div.innerHTML = `
@@ -45,6 +56,7 @@ const displayAllPhones = (phones, status) => {
 };
 const handelShowAll = () => {
   displayAllPhones(allPhonesData, true);
+  document.getElementById("show-all-btn").classList.add("hidden");
 };
 // phone details
 const showDetails = async (id) => {
