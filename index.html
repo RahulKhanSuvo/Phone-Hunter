@@ -56,13 +56,22 @@
                 </div>
 
                 <!-- Search Button -->
-                <button
-                    class="ml-3 px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition duration-300">
+                <button onclick="handelSearch()"
+                    class="ml-3 px-4 py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition duration-300">
                     Search
                 </button>
             </div>
         </section>
-        <section id="phone-container"></section>
+        <section>
+            <div id="spinner" class="hidden">
+                <div class="flex justify-center mb-8"><span
+                        class="loading bg-[#0D6EFD] loading-spinner loading-lg"></span>
+                </div>
+            </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4"></div>
+
+            <!-- dynamic card  -->
+        </section>
     </main>
     <footer class="bg-gray-50 py-10">
         <div class="container mx-auto px-4">
